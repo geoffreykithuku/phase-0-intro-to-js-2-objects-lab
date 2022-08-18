@@ -15,11 +15,15 @@ function destructivelyUpdateEmployeeWithKeyAndValue(employee, key, value){
     employee.streetAddress = "12 Broadway";
     return employee;
 }
-function deleteFromEmployeeByKey(employee, key){
+function deleteFromEmployeeByKey(employee, name){
+    let newEmployee = {
+        ...employee
+    }
+    delete newEmployee.name;
+    return newEmployee;
+}
+function  destructivelyDeleteFromEmployeeByKey(employee, name){
     delete employee.name;
     return employee;
-}
-function  destructivelyDeleteFromEmployeeByKey(employee, key){
-    return delete employee.name;
 }
 
